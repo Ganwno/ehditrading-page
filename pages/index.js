@@ -69,7 +69,7 @@ export default function TradingPage() {
             </ExpandedSideBar>
           )}
       </MobileMenu>}
-      <div className="grid grid-cols-12 w-full h-[90%] max-md:block">
+      <div className="grid grid-cols-12 w-full h-[90%] max-md:grid-cols-1">
         <SideBar isExpanded={isExpanded}>
         {sideBarItems.map((sideBarItem) => (
             <SideBarItem
@@ -92,13 +92,13 @@ export default function TradingPage() {
           )}
         </SideBar>
 
-        <div className="w-full h-full bg-slate-700 col-span-9 max-md:row-span-7 max-md:h-[70%] ">
+        <div className="w-full h-full bg-slate-700 col-span-9 max-md:row-span-7  ">
           {/* <Chart /> */}
           <TradingViewWidget />
           <Orders />
           <Footer />
         </div>
-        <div className="col-span-2 max-md:h-[30%]">
+        <div className="col-span-2 ">
           <BuySell />
         </div>
       </div>

@@ -12,8 +12,9 @@ export default function BuySell() {
         </select>
         <input className="w-full px-3 py-2 text-white rounded-lg bg-slate-500 focus:outline-none" type="number" defaultValue={lots} min={0.01} step={0.01} />
         </div>
-        <button className="w-full py-7 border-2 border-green-500 rounded-lg text-2xl text-green-500 max-md:px-3 max-md:py-2 max-md:text-lg">Buy</button>
-        <button className="w-full py-7 border-2 border-red-500 rounded-lg text-2xl text-red-500 max-md:px-3 max-md:py-2 max-md:text-lg">Sell</button>
+        <button className="w-full py-7 bg-[#089981] rounded-lg text-2xl text-white max-md:px-3 max-md:py-2 max-md:text-lg">Buy</button>
+        <button className="w-full py-7 bg-[#F23645] rounded-lg text-2xl text-white max-md:px-3 max-md:py-2 max-md:text-lg">Sell</button>
+        <button className="w-full py-7 border-2 border-yellow-500 text-yellow-500 rounded-lg text-2xl  max-md:px-3 max-md:py-2 max-md:text-lg">Advanced Order</button>
     </div>
   </div>;
 }
