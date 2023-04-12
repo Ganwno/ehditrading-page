@@ -52,7 +52,7 @@ export default function TradingViewWidget() {
   );
 
   return (
-    <div className='tradingview-widget-container h-[60%]'>
+    <div className='tradingview-widget-container h-[60%] max-md:h-full'>
       <div id='tradingview_607b4' className='h-full' />
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener" target="_blank"><span className="blue-text">EUR USD chart</span></a> by TradingView
