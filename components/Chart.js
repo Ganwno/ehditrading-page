@@ -24,5 +24,5 @@ export default function Chart() {
       chart.remove()
     }
  }, []);
-  return <div className="h-[60%] w-full max-md:h-[600px]" ref={chartContainerRef}></div>;
+  return <div className="h-[60%] w-full bg-slate-700 max-md:h-[600px]" ref={chartContainerRef}></div>;
 }
