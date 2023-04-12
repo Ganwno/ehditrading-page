@@ -68,7 +68,7 @@ export default function TradingPage() {
             <WatchList />
           </ExpandedSideBar>
         )}
-        <div className="w-full h-full col-span-9">
+        <div className="w-full h-full bg-slate-700 col-span-9">
           <Chart />
           <Orders />
           <Footer />

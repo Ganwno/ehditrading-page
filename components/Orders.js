@@ -14,7 +14,7 @@ export default function Orders(){
             <div className="flex items-center h-full justify-center">
                 <div className="space-y-3 text-slate-400 text-center">
                     <FontAwesomeIcon icon={faClose} className="text-6xl" />
-                    <p>there are No orders</p>
+                    <p>no open orders</p>
 
                 </div>
             </div>
