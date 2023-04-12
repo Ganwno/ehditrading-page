@@ -28,7 +28,7 @@ export default function TradingViewWidget() {
       return () => onLoadScriptRef.current = null;
 
       function createWidget() {
-        if (document.getElementById('tradingview_765c7') && 'TradingView' in window) {
+        if (document.getElementById('tradingview_607b4') && 'TradingView' in window) {
           new window.TradingView.widget({
             autosize: true,
             symbol: "FX:EURUSD",
@@ -43,7 +43,7 @@ export default function TradingViewWidget() {
             hide_side_toolbar: false,
             allow_symbol_change: true,
             details: true,
-            container_id: "tradingview_765c7"
+            container_id: "tradingview_607b4"
           });
         }
       }
@@ -53,7 +53,7 @@ export default function TradingViewWidget() {
 
   return (
     <div className='tradingview-widget-container h-[60%]'>
-      <div id='tradingview_765c7 ' className='h-full' />
+      <div id='tradingview_607b4' className='h-full' />
       <div className="tradingview-widget-copyright">
         <a href="https://www.tradingview.com/symbols/EURUSD/?exchange=FX" rel="noopener" target="_blank"><span className="blue-text">EUR USD chart</span></a> by TradingView
       </div>
