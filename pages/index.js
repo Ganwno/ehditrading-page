@@ -6,6 +6,8 @@ import Chart from "@/components/Chart";
 import Orders from "@/components/Orders";
 import BuySell from "@/components/BuySell";
 import Footer from "@/components/Footer";
+import MobileMenu from "@/components/MobileMenu";
+import TradingViewWidget from "@/components/TradingViewWidger";
 import {
   faBars,
   faHistory,
@@ -46,9 +48,30 @@ export default function TradingPage() {
   return (
     <>
       <Navbar onMenu={handleShowMenu} showMenu={showMenu} />
+      {showMenu && <MobileMenu >
+        {!isExpanded && sideBarItems.map((sideBarItem) => (
+          <SideBarItem
+            showMenu={showMenu}
+            activeId={activeButtonId}
+            onExpand={handleExpand}
+            key={sideBarItem.id}
+            id={sideBarItem.id}
+            icon={sideBarItem.icon}
+            text={sideBarItem.text}
+          />
+        ))}
+        {isExpanded && (
+            <ExpandedSideBar
+              title={selectedSideBarItem.text}
+              onClose={handleClose}
+            >
+              <WatchList />
+            </ExpandedSideBar>
+          )}
+      </MobileMenu>}
       <div className="grid grid-cols-12 w-full h-[90%] max-md:grid-cols-1">
         <SideBar isExpanded={isExpanded}>
-          {sideBarItems.map((sideBarItem) => (
+        {sideBarItems.map((sideBarItem) => (
             <SideBarItem
               showMenu={showMenu}
               activeId={activeButtonId}
@@ -59,17 +82,19 @@ export default function TradingPage() {
               text={sideBarItem.text}
             />
           ))}
+          {isExpanded && (
+            <ExpandedSideBar
+              title={selectedSideBarItem.text}
+              onClose={handleClose}
+            >
+              <WatchList />
+            </ExpandedSideBar>
+          )}
         </SideBar>
-        {isExpanded && (
-          <ExpandedSideBar
-            title={selectedSideBarItem.text}
-            onClose={handleClose}
-          >
-            <WatchList />
-          </ExpandedSideBar>
-        )}
+
         <div className="w-full h-full bg-slate-700 col-span-9">
-          <Chart />
+          {/* <Chart /> */}
+          <TradingViewWidget />
           <Orders />
           <Footer />
         </div>
