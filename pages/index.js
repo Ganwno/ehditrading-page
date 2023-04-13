@@ -45,7 +45,7 @@ export default function TradingPage() {
   const [activeButtonId, setActiveButtonId] = useState(null);
   const [tabIds, setTabIds] = useState([]);
   const [activeSymbolTab, setActiveSymbolTab] = useState(1);
-  const [activeOrderTab, setActiveOrderTab] = useState(1)
+  const [activeOrderTab, setActiveOrderTab] = useState(1);
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
   function handleShowModal() {
@@ -76,6 +76,7 @@ export default function TradingPage() {
   return (
     <>
       <MobileNav onShowMenu={handleShowMenu}></MobileNav>
+
       <Navbar>
         <ParentTab onShowModal={handleShowModal}>
           {symbols
@@ -118,6 +119,21 @@ export default function TradingPage() {
           )}
         </MobileMenu>
       )}
+      <div className="md:hidden">
+      <ParentTab onShowModal={handleShowModal}>
+        {symbols
+          .filter((symbol) => tabIds.includes(symbol.id))
+          .map((symbol) => (
+            <Tab
+              activeId={activeSymbolTab}
+              onActive={handleActiveSymbolTab}
+              key={symbol.id}
+              id={symbol.id}
+              name={symbol.name}
+            />
+          ))}
+      </ParentTab>
+      </div>
       <div className="grid grid-cols-12 w-full h-[90%] max-md:grid-cols-1">
         <SideBar isExpanded={isExpanded}>
           {sideBarItems.map((sideBarItem) => (
