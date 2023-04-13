@@ -6,7 +6,7 @@ export default function Chart() {
   useEffect(() => {
     const chart = createChart(chartContainerRef.current,{
       layout:{
-       textColor:'white', background:{type:ColorType.Solid, color:'black'}
+       textColor:'white', background:{type:ColorType.Solid, color:'#161622'}
       },
       width:chartContainerRef.current.clientWidth,
       height:chartContainerRef.current.clientHeight,

@@ -11,8 +11,8 @@ export default function SideBarItem(props) {
         setActive(!active);
       }}
       className={
-        "text-center flex h-20 border-b border-slate-500 items-center justify-center cursor-pointer hover:text-cyan-500 "
-        +(props.activeId === props.id ? 'text-cyan-500 bg-slate-600' : 'text-white')
+        "text-center flex h-20 border-b border-slate-500 items-center justify-center cursor-pointer  "
+        +(props.activeId === props.id ? 'text-white brightness-100' : 'text-white brightness-50')
       }
     >
       <div>
