@@ -6,7 +6,7 @@ export default function MobileNav(props) {
     <>
       <nav className="min-w-full flex justify-between items-center px-4 h-20 bg-slate-600 md:hidden">
         <button onClick={props.onShowMenu}>
-          <FontAwesomeIcon icon={faBars} className="text-2xl text-cyan-400" />
+          <FontAwesomeIcon icon={faBars} className="text-2xl text-slate-400" />
         </button>
         <div className="flex gap-4 items-center">
         <p className="text-md text-white">
