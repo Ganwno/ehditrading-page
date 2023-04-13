@@ -11,7 +11,7 @@ export default function SideBarItem(props) {
         setActive(!active);
       }}
       className={
-        "text-center flex h-20 border-b border-slate-500 items-center justify-center cursor-pointer  "
+        "text-center px-3 flex h-20 border-b border-slate-500 items-center justify-center cursor-pointer  "
         +(props.activeId === props.id ? 'text-white brightness-100' : 'text-white brightness-50')
       }
     >

@@ -7,6 +7,7 @@ import Orders from "@/components/Orders";
 import BuySell from "@/components/BuySell";
 import Footer from "@/components/Footer";
 import ParentTab from "@/components/ParentTab";
+import MobileMenu from "@/components/MobileMenu";
 import TradingViewWidget from "@/components/TradingViewWidger";
 import Tab from "@/components/Tab";
 import SearchModal from "@/components/SearchModal";
