@@ -8,6 +8,7 @@ import BuySell from "@/components/BuySell";
 import Footer from "@/components/Footer";
 import ParentTab from "@/components/ParentTab";
 import MobileMenu from "@/components/MobileMenu";
+import TestWidget from "@/components/TestWidget";
 import TradingViewWidget from "@/components/TradingViewWidger";
 import Tab from "@/components/Tab";
 import SearchModal from "@/components/SearchModal";
@@ -134,7 +135,7 @@ export default function TradingPage() {
           ))}
       </ParentTab>
       </div>
-      <div className="grid grid-cols-12 w-full h-[90%] max-md:grid-cols-1">
+      <div className="grid grid-cols-12 w-full h-[90%] max-md:block">
         <SideBar isExpanded={isExpanded}>
           {sideBarItems.map((sideBarItem) => (
             <SideBarItem
@@ -160,6 +161,7 @@ export default function TradingPage() {
         <div className="w-full h-full bg-slate-700 col-span-9 max-md:row-span-7  ">
           {/* <Chart /> */}
           <TradingViewWidget />
+          {/* <TestWidget /> */}
           <Orders />
           <Footer />
         </div>
