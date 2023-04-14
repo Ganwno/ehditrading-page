@@ -30,11 +30,11 @@ export default function Orders() {
         {orderTabs.map((tab) => (
           <div key={tab.id} onClick={()=>{
             handleActiveTab(tab.id)
-          }} className={"tab tab-bordered " + (tab.id === active && 'tab-active')}>{tab.name}</div>
+          }} className={"tab tab-bordered " + (tab.id === active && 'tab-active text-secondary')}>{tab.name}</div>
         ))}
       </div>
       <div className="flex items-center h-full justify-center">
-        <div className="space-y-3 text-slate-400 text-center">
+        <div className="space-y-3 text-secondary text-center">
           <FontAwesomeIcon icon={faClose} className="text-6xl" />
           <p>{text}</p>
         </div>

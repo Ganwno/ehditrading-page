@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Navbar(props) {
   return (
-    <nav className="w-full h-[95px] grid grid-cols-12 bg-slate-600 max-md:hidden">
+    <nav className="w-full h-[95px] grid grid-cols-12 bg-secondary max-md:hidden">
       <div className="flex px-2 items-center justify-center max-md:hidden">
         <Image className="rounded-xl" src={"/images/logo.png"} width={60} height={60} />
       </div>
@@ -23,11 +23,11 @@ export default function Navbar(props) {
       </button>
       {props.children}
       <div className=" px-3 items-center gap-5 py-1 col-span-2 text-center my-auto space-y-2">
-      <p className="text-sm text-white">
-      <span className="font-bold text-[#089981]">Balance: </span>
+      <p className="text-sm text-primary">
+      <span className="font-bold">Balance: </span>
           <strong>$500.00</strong> USD
         </p>
-        <button className="border-2 w-full text-cyan-500 rounded-lg border-cyan-500 px-3 py-1">
+        <button className=" w-full text-white bg-primary rounded-lg  px-3 py-1">
           Deposit
         </button>
       </div>

@@ -158,8 +158,8 @@ export default function TradingPage() {
         </SideBar>
 
         <div className="w-full h-full bg-slate-700 col-span-9 max-md:row-span-7  ">
-          <Chart />
-          {/* <TradingViewWidget /> */}
+          {/* <Chart /> */}
+          <TradingViewWidget />
           <Orders />
           <Footer />
         </div>

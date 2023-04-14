@@ -35,7 +35,7 @@ export default function BuySell() {
         <button className="w-full py-2 bg-[#F23645] rounded-lg text-lg text-white max-md:px-3 max-md:py-2 max-md:text-lg">
           Sell
         </button>
-        <button className="w-full py-2 border-2 border-yellow-500 text-yellow-500 rounded-lg text-lg  max-md:px-3 max-md:py-2 max-md:text-lg">
+        <button className="w-full py-2 border-2 text-secondary border-secondary rounded-lg text-lg  max-md:px-3 max-md:py-2 max-md:text-lg">
           Advanced Order
         </button>
       </div>

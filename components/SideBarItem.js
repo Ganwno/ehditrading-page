@@ -12,7 +12,7 @@ export default function SideBarItem(props) {
       }}
       className={
         "text-center px-3 flex h-20 border-b border-slate-500 items-center justify-center cursor-pointer  "
-        +(props.activeId === props.id ? 'text-white brightness-100' : 'text-white brightness-50')
+        +(props.activeId === props.id ? 'text-white bg-slate-400 brightness-100' : 'text-secondary')
       }
     >
       <div>
