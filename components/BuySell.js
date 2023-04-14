@@ -24,7 +24,7 @@ export default function BuySell() {
           </label>
         </div>
       </div>
-      <div className="px-3 space-y-3">
+      <div className="px-3 py-5 space-y-3">
         <div className="w-ful py-2 px-3 rounded-lg bg-slate-950 flex items-center gap-3">
           <input type="checkbox" className="toggle toggle-success" />
           <p>Auto close</p>

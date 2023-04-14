@@ -22,17 +22,17 @@ export default function Navbar(props) {
         />
       </button>
       {props.children}
-      <div className="h-full col-span-2 bg-slate-600 gap-6 px-3 flex justify-center items-center">
-      <div className="flex px-3 items-center gap-5">
+      <div className=" px-3 items-center gap-5 py-1 col-span-2 text-center my-auto space-y-2">
       <p className="text-sm text-white">
+      <span className="font-bold text-[#089981]">Balance: </span>
           <strong>$500.00</strong> USD
         </p>
-        <button className="border-2 text-cyan-500 rounded-lg border-cyan-500 px-3 py-2">
+        <button className="border-2 w-full text-cyan-500 rounded-lg border-cyan-500 px-3 py-1">
           Deposit
         </button>
       </div>
 
-      </div>
+      
     </nav>
   );
 }
