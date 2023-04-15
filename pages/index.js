@@ -1,6 +1,7 @@
 import SideBar from "@/components/SideBar";
 import SideBarItem from "@/components/SideBarItem";
 import WatchList from "@/components/WatchList";
+import History from "@/components/History";
 import Navbar from "@/components/Navbar";
 import Chart from "@/components/Chart";
 import Orders from "@/components/Orders";
@@ -28,7 +29,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function TradingPage() {
-  // this data should be fetched from an api
+  // this data should be fetched from an API
   const symbols = [
     { id: 1, name: "EUR/USD" },
     { id: 2, name: "Bitcoin" },
@@ -37,9 +38,6 @@ export default function TradingPage() {
   const sideBarItems = [
     { id: 1, icon: faBars, text: "watch list" },
     { id: 2, icon: faHistory, text: "History" },
-    { id: 3, icon: faAreaChart, text: "Meta Trader terminal" },
-    { id: 4, icon: faMessage, text: "Support" },
-    { id: 5, icon: faSignOut, text: "Logout" },
   ];
   const [isExpanded, setIsExpanded] = useState(false);
   const [selectedSideBarItem, setSelectedSideBarItem] = useState(null);
@@ -115,25 +113,25 @@ export default function TradingPage() {
               title={selectedSideBarItem.text}
               onClose={handleClose}
             >
-              <WatchList />
+              {activeButtonId == 1 ? <WatchList /> : <History />}
             </ExpandedSideBar>
           )}
         </MobileMenu>
       )}
       <div className="md:hidden">
-      <ParentTab onShowModal={handleShowModal}>
-        {symbols
-          .filter((symbol) => tabIds.includes(symbol.id))
-          .map((symbol) => (
-            <Tab
-              activeId={activeSymbolTab}
-              onActive={handleActiveSymbolTab}
-              key={symbol.id}
-              id={symbol.id}
-              name={symbol.name}
-            />
-          ))}
-      </ParentTab>
+        <ParentTab onShowModal={handleShowModal}>
+          {symbols
+            .filter((symbol) => tabIds.includes(symbol.id))
+            .map((symbol) => (
+              <Tab
+                activeId={activeSymbolTab}
+                onActive={handleActiveSymbolTab}
+                key={symbol.id}
+                id={symbol.id}
+                name={symbol.name}
+              />
+            ))}
+        </ParentTab>
       </div>
       <div className="grid grid-cols-12 w-full h-[90%] max-md:block">
         <SideBar isExpanded={isExpanded}>
@@ -153,7 +151,7 @@ export default function TradingPage() {
               title={selectedSideBarItem.text}
               onClose={handleClose}
             >
-              <WatchList />
+              {activeButtonId == 1 ? <WatchList /> : <History />}
             </ExpandedSideBar>
           )}
         </SideBar>
