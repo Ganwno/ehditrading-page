@@ -3,17 +3,22 @@ import SideBarItem from "@/components/SideBarItem";
 import WatchList from "@/components/WatchList";
 import History from "@/components/History";
 import Navbar from "@/components/Navbar";
-import Chart from "@/components/Chart";
 import Orders from "@/components/Orders";
 import BuySell from "@/components/BuySell";
 import Footer from "@/components/Footer";
 import ParentTab from "@/components/ParentTab";
 import MobileMenu from "@/components/MobileMenu";
-import TestWidget from "@/components/TestWidget";
-import TradingViewWidget from "@/components/TradingViewWidger";
 import Tab from "@/components/Tab";
 import SearchModal from "@/components/SearchModal";
 import Modal from "@/components/Modal";
+import dynamic from "next/dynamic";
+const TVChartContainer = dynamic(
+  () =>
+    import("../components/TVChartContainer").then(
+      (mod) => mod.TVChartContainer
+    ),
+  { ssr: false }
+);
 import {
   faBars,
   faHistory,
@@ -27,6 +32,7 @@ import ExpandedSideBar from "@/components/ExpandedSideBar";
 import { createChart } from "lightweight-charts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import TradingChart from "@/components/Chart/TradingViewChart";
 
 export default function TradingPage() {
   // this data should be fetched from an API
@@ -157,9 +163,8 @@ export default function TradingPage() {
         </SideBar>
 
         <div className="w-full h-full bg-slate-700 col-span-9 max-md:row-span-7  ">
-          {/* <Chart /> */}
-          <TradingViewWidget />
-          {/* <TestWidget /> */}
+          <TVChartContainer />
+
           <Orders />
           <Footer />
         </div>
